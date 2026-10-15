@@ -1,0 +1,50 @@
+{
+  "name": "is-lesion",
+  "version": "0.1.0",
+  "description": "Detect lesions in MRI and medical scans using TypeSafe Jev System One, local OpenJev vision models, and Hugging Face dataset choices.",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "bin": {
+    "is-lesion": "./bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node server.mjs",
+    "playground": "node server.mjs",
+    "test": "node --test test/is-lesion.test.js",
+    "bench": "node scripts/bench-engines.mjs",
+    "seed": "node scripts/seed-golden.mjs"
+  },
+  "keywords": [
+    "typesafe",
+    "jev",
+    "openjev",
+    "system-one",
+    "mri",
+    "lesion-detection",
+    "brain-tumor",
+    "huggingface",
+    "medical-imaging",
+    "calibrated-probabilities"
+  ],
+  "author": "Hemanth HM <hemanth@h3manth.com> (https://h3manth.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemanth/is-lesion.git"
+  },
+  "homepage": "https://hemanth.github.io/is-lesion/"
+}

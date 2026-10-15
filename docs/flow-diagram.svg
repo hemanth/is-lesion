@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 320" width="100%" height="100%" fill="none">
+  <style>
+    .label-head { font-family: 'Geist Mono', 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; fill: #000000; text-transform: uppercase; }
+    .node-title { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #000000; }
+    .node-sub { font-family: 'Geist Mono', 'IBM Plex Mono', monospace; font-size: 10px; fill: #333333; }
+    .hero-title { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .hero-sub { font-family: 'Geist Mono', 'IBM Plex Mono', monospace; font-size: 10px; fill: #d4d4d8; }
+    .badge-text { font-family: 'Geist Mono', 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600; fill: #000000; }
+    .badge-inv { font-family: 'Geist Mono', 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600; fill: #ffffff; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 8.5 5 L 1 8.5" stroke="#000000" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="980" height="320" fill="#ffffff"/>
+
+  <!-- Cluster 1: Hugging Face Hub & Input State -->
+  <rect x="20" y="24" width="250" height="272" rx="6" stroke="#000000" stroke-width="1.2" stroke-dasharray="4,4" fill="#ffffff"/>
+  <text x="36" y="46" class="label-head">01 / HF DATASET &amp; STATE</text>
+
+  <!-- Node 1A: HF Datasets Server -->
+  <rect x="38" y="64" width="214" height="86" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="48" y="74" width="76" height="16" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="54" y="85" class="badge-text">CLASSLABEL</text>
+  <text x="48" y="108" class="node-title">HF Datasets Server API</text>
+  <text x="48" y="124" class="node-sub">Hemg/Brain-Tumor-MRI</text>
+  <text x="48" y="138" class="node-sub">[glioma, meningioma, notumor...]</text>
+
+  <!-- Node 1B: Target MRI Scan Asset -->
+  <rect x="38" y="176" width="214" height="98" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="48" y="186" width="84" height="16" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="54" y="197" class="badge-text">ASSET PREP</text>
+  <text x="48" y="220" class="node-title">MRI Slice Normalization</text>
+  <text x="48" y="236" class="node-sub">280²–1568² px bounds guard</text>
+  <text x="48" y="252" class="node-sub">state: { mri_scan: uuid }</text>
+
+  <!-- Orthogonal Connectors into Hero Node -->
+  <path d="M 252 107 L 296 107 Q 304 107 304 115 L 304 138 Q 304 146 312 146 L 334 146" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 252 225 L 296 225 Q 304 225 304 217 L 304 186 Q 304 178 312 178 L 334 178" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Cluster 2: Signature Inverted Hero Node (TypeSafe Jev System One) -->
+  <rect x="338" y="54" width="268" height="212" rx="6" fill="#000000" stroke="#000000" stroke-width="1.5"/>
+  <rect x="356" y="72" width="114" height="18" rx="2" stroke="#ffffff" stroke-width="1" fill="#000000"/>
+  <text x="364" y="84" class="badge-inv">SYSTEM ONE ENGINE</text>
+  <text x="356" y="114" class="hero-title">TypeSafe Jev (jev-preview)</text>
+  <text x="356" y="134" class="hero-sub">POST /v1/systemone</text>
+  <line x1="356" y1="148" x2="588" y2="148" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="356" y="170" class="hero-sub">• Speculative 4-question fan-out</text>
+  <text x="356" y="188" class="hero-sub">• Visual exemplar criteria refs</text>
+  <text x="356" y="206" class="hero-sub">• Calibrated distribution [0, 1]</text>
+  <text x="356" y="224" class="hero-sub">• Zero generative token bloat</text>
+  <text x="356" y="246" class="hero-sub">TypeSafe-Danger-Zone-Images: true</text>
+
+  <!-- Orthogonal Fan-Out Connectors to 4 Typed Primitives -->
+  <path d="M 606 112 L 642 112 Q 650 112 650 104 L 650 64 Q 650 56 658 56 L 682 56" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 606 144 L 642 144 Q 650 144 650 132 L 650 128 Q 650 120 658 120 L 682 120" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 606 176 L 642 176 Q 650 176 650 184 L 650 192 Q 650 200 658 200 L 682 200" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 606 208 L 642 208 Q 650 208 650 216 L 650 256 Q 650 264 658 264 L 682 264" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Cluster 3: Parallel Typed Judgments & Clinical Triage -->
+  <rect x="668" y="16" width="292" height="288" rx="6" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <text x="686" y="34" class="label-head">02 / TYPED JUDGMENTS &amp; TRIAGE</text>
+
+  <!-- Primitive 1: Noul -->
+  <rect x="686" y="42" width="256" height="50" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="696" y="50" width="42" height="14" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="703" y="60" class="badge-text">NOUL</text>
+  <text x="748" y="61" class="node-title">has_cancer: P(lesion)</text>
+  <text x="696" y="80" class="node-sub">Calibrated probability in [0.00, 1.00]</text>
+
+  <!-- Primitive 2: Choice -->
+  <rect x="686" y="102" width="256" height="56" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="696" y="110" width="52" height="14" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="703" y="120" class="badge-text">CHOICE</text>
+  <text x="758" y="121" class="node-title">diagnosis (HF Classes)</text>
+  <text x="696" y="140" class="node-sub">choice + probabilities + confidence</text>
+
+  <!-- Primitive 3: Score -->
+  <rect x="686" y="168" width="256" height="54" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="696" y="176" width="46" height="14" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="703" y="186" class="badge-text">SCORE</text>
+  <text x="752" y="187" class="node-title">severity (0.00 – 3.00)</text>
+  <text x="696" y="206" class="node-sub">4-level mass-effect &amp; midline rubric</text>
+
+  <!-- Primitive 4: Box -->
+  <rect x="686" y="232" width="256" height="56" rx="4" stroke="#000000" stroke-width="1.2" fill="#ffffff"/>
+  <rect x="696" y="240" width="36" height="14" rx="2" stroke="#000000" stroke-width="1" fill="#ffffff"/>
+  <text x="703" y="250" class="badge-text">BOX</text>
+  <text x="742" y="251" class="node-title">lesion_box Localization</text>
+  <text x="696" y="270" class="node-sub">Normalized {top, left, bottom, right}</text>
+</svg>

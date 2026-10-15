@@ -1,0 +1,183 @@
+{
+  "generatedAt": "2026-10-15T15:04:14.502Z",
+  "dataset": "Hemg/Brain-Tumor-MRI-Dataset",
+  "sampleCount": 100,
+  "perClassCount": 25,
+  "engines": {
+    "jev": {
+      "label": "TypeSafe Jev 1.14 (+ Visual Exemplars)",
+      "N": 100,
+      "binaryAcc": 84,
+      "sensitivity": 85.3,
+      "specificity": 80,
+      "precision": 92.8,
+      "binaryF1": 88.9,
+      "choiceAcc": 69,
+      "macroF1": 69.6,
+      "perClassRecall": {
+        "glioma": 76,
+        "meningioma": 68,
+        "notumor": 76,
+        "pituitary": 56
+      },
+      "brierScore": 0.0955,
+      "ece": 4.9,
+      "highConfCoverage": 57,
+      "highConfTotal": 57,
+      "highConfChoiceAcc": 86,
+      "highConfBinaryAcc": 93,
+      "errorCatchRate": 74.2,
+      "confusion": {
+        "tp": 64,
+        "tn": 20,
+        "fp": 5,
+        "fn": 11
+      },
+      "latency": {
+        "avg": 182,
+        "p50": 165,
+        "p95": 273
+      }
+    },
+    "jev-text": {
+      "label": "TypeSafe Jev 1.14 (Text-Only Criteria)",
+      "N": 100,
+      "binaryAcc": 81,
+      "sensitivity": 81.3,
+      "specificity": 80,
+      "precision": 92.4,
+      "binaryF1": 86.5,
+      "choiceAcc": 62,
+      "macroF1": 62.2,
+      "perClassRecall": {
+        "glioma": 60,
+        "meningioma": 60,
+        "notumor": 76,
+        "pituitary": 52
+      },
+      "brierScore": 0.1113,
+      "ece": 7.1,
+      "highConfCoverage": 56,
+      "highConfTotal": 56,
+      "highConfChoiceAcc": 80.4,
+      "highConfBinaryAcc": 89.3,
+      "errorCatchRate": 71.1,
+      "confusion": {
+        "tp": 61,
+        "tn": 20,
+        "fp": 5,
+        "fn": 14
+      },
+      "latency": {
+        "avg": 123,
+        "p50": 108,
+        "p95": 200
+      }
+    },
+    "clip-exemplar": {
+      "label": "OpenJev Local ONNX · CLIP ViT-B/32 (+ Exemplars)",
+      "N": 100,
+      "binaryAcc": 89,
+      "sensitivity": 85.3,
+      "specificity": 100,
+      "precision": 100,
+      "binaryF1": 92.1,
+      "choiceAcc": 69,
+      "macroF1": 69.3,
+      "perClassRecall": {
+        "glioma": 52,
+        "meningioma": 60,
+        "notumor": 100,
+        "pituitary": 64
+      },
+      "brierScore": 0.0966,
+      "ece": 12.5,
+      "highConfCoverage": 17,
+      "highConfTotal": 17,
+      "highConfChoiceAcc": 82.4,
+      "highConfBinaryAcc": 94.1,
+      "errorCatchRate": 90.3,
+      "confusion": {
+        "tp": 64,
+        "tn": 25,
+        "fp": 0,
+        "fn": 11
+      },
+      "latency": {
+        "avg": 148,
+        "p50": 95,
+        "p95": 257
+      }
+    },
+    "clip-zeroshot": {
+      "label": "OpenJev Local ONNX · CLIP ViT-B/32 (Zero-Shot Text)",
+      "N": 100,
+      "binaryAcc": 75,
+      "sensitivity": 100,
+      "specificity": 0,
+      "precision": 75,
+      "binaryF1": 85.7,
+      "choiceAcc": 25,
+      "macroF1": 10,
+      "perClassRecall": {
+        "glioma": 0,
+        "meningioma": 100,
+        "notumor": 0,
+        "pituitary": 0
+      },
+      "brierScore": 0.2125,
+      "ece": 69,
+      "highConfCoverage": 100,
+      "highConfTotal": 100,
+      "highConfChoiceAcc": 25,
+      "highConfBinaryAcc": 75,
+      "errorCatchRate": 0,
+      "confusion": {
+        "tp": 75,
+        "tn": 0,
+        "fp": 25,
+        "fn": 0
+      },
+      "latency": {
+        "avg": 110,
+        "p50": 106,
+        "p95": 217
+      }
+    },
+    "openjev": {
+      "label": "OpenJev In-Tree Exemplar Fingerprint (0-dep)",
+      "N": 100,
+      "binaryAcc": 88,
+      "sensitivity": 100,
+      "specificity": 52,
+      "precision": 86.2,
+      "binaryF1": 92.6,
+      "choiceAcc": 73,
+      "macroF1": 73.3,
+      "perClassRecall": {
+        "glioma": 72,
+        "meningioma": 76,
+        "notumor": 52,
+        "pituitary": 92
+      },
+      "brierScore": 0.1655,
+      "ece": 46.4,
+      "highConfCoverage": 0,
+      "highConfTotal": 0,
+      "highConfChoiceAcc": null,
+      "highConfBinaryAcc": null,
+      "errorCatchRate": 100,
+      "confusion": {
+        "tp": 75,
+        "tn": 13,
+        "fp": 12,
+        "fn": 0
+      },
+      "latency": {
+        "avg": 1,
+        "p50": 1,
+        "p95": 1
+      }
+    }
+  }
+}
