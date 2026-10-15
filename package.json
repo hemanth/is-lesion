@@ -7,7 +7,7 @@
   "module": "src/index.js",
   "types": "src/index.d.ts",
   "bin": {
-    "is-lesion": "./bin/cli.js"
+    "is-lesion": "bin/cli.js"
   },
   "exports": {
     ".": {
